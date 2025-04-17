@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NumberAndMath</title>
+</head>
+<body>
+  <script>
+    function formatCurrency(amount,currencyCode){
+      const mapcurrency={
+        USD: 'en-US',
+        EUR: 'de-DE',
+        INR: 'en-IN',
+        GBP: 'en-GB',
+        JPY: 'ja-JP',
+        CNY: 'zh-CN'
+      };
+      const selectLocale=mapcurrency[currencyCode]||'en-US';
+      return new Intl.NumberFormat(selectLocale,{
+        style:'currency',
+        currency:currencyCode,
+        maximumFractionDigits:2,
+        minimumFractionDigits:2
+      }).format(amount);
+    }
+    
+
+    console.log(formatCurrency(1234567,'USD'));
+    console.log(formatCurrency(1234567.76,'INR'));
+    console.log(formatCurrency(1234.567,'EUR'));
+    console.log(formatCurrency(1234.567,'GBP'));
+    console.log(formatCurrency(1234.567,'JPY'));
+    console.log(formatCurrency(1234.567,'CNY'));
+  </script>
+  
+</body>
+</html>
