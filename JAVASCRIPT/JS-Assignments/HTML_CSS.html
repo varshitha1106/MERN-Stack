@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMLCSS</title>
+</head>
+<body>
+  <div id="counterDisplay">0</div> 
+  <button id="incrementBtn">Increment</button> 
+  <button id="decrementBtn">Decrement</button> 
+ 
+  <script>     
+  let count = 0;     
+  const display = document.getElementById('counterDisplay'); 
+ 
+  document.getElementById('incrementBtn').addEventListener('click', () => { 
+    count++;         
+    display.textContent = count; 
+  }); 
+ 
+  document.getElementById('decrementBtn').addEventListener('click', () => { 
+    if (count > 0) {             
+      count--;             
+      display.textContent = count; 
+    } 
+  }); 
+  </script>
+
+
+  
+</body>
+</html>
