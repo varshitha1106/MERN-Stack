@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>booleans and if</title>
+</head>
+<body>
+  <script>
+    const user1 = {     
+      age: 20,     
+      hasLicense: true,     
+      temperature: 25,     
+      humidity: 50,     
+      role: "user",     
+      isActive: false,     
+      isLoggedIn: false,     
+      isPremiumUser: true,     
+      userType: "student",     
+      score: 92,     
+      completedAssignments: 6,     
+      onLeave: false 
+    }; 
+ 
+    function evaluateConditions(obj) {   
+      if (obj.age > 18 && obj.hasLicense) 
+      {          
+        return "Eligible to drive"; 
+      } 
+      if (obj.temperature > 30 || obj.humidity > 70) {       
+        return "Warning: High discomfort level"; 
+      } 
+   
+      if ((obj.role === "admin" || obj.role === "editor") && obj.isActive) 
+      {       
+        return "Access granted"; 
+      } 
+   
+      if (!obj.isLoggedIn && obj.isPremiumUser) {       
+        return "Please log in to access premium features"; 
+      } 
+      if (obj.userType === "student" && obj.score >= 90 && obj.completedAssignments >= 5) 
+      {       
+        return "Excellent student performance"; 
+      } 
+   
+      if ((obj.role === "employee" && obj.onLeave) || !obj.isActive) {       
+        return "Access temporarily disabled"; 
+      } 
+ 
+      return "No specific condition met"; 
+    } 
+   
+   
+  console.log(evaluateConditions(user1)); // "Eligible to drive
+
+  </script>
+  
+</body>
+</html>
