@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function createCalculator() {   
+      return {     
+        add: (a, b) => a + b,     
+        subtract: (a, b) => a - b,     
+        multiply: (a, b) => a * b,     
+        divide: (a, b) => b !== 0 ? a / b : 'Cannot divide by zero' 
+      }; 
+    } 
+ 
+ 
+    const calc = createCalculator(); 
+    console.log(calc.add(2, 3));       
+    console.log(calc.divide(10, 2));    
+
+  </script>
+  
+</body>
+</html>
