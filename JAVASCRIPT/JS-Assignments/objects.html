@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    class Book { 
+      constructor(title, author, isbn) {       
+        this.title = title;       
+        this.author = author;       
+        this.isbn = isbn;       
+        this.isBorrowed = false; 
+      }     
+      borrow() {       
+        if (!this.isBorrowed) {         
+          this.isBorrowed = true;         
+          return true; 
+        } 
+        return false;  
+      } 
+   
+      returnBook() {       
+        if (this.isBorrowed) {         
+          this.isBorrowed = false;         
+          return true; 
+        } 
+        return false; 
+      } 
+    } 
+ 
+    class Library {     
+      constructor() {       
+        this.books = []; 
+      } 
+   
+      addBook(book) {       
+        if (book instanceof Book) {         
+          this.books.push(book);         
+          return true; 
+        } 
+        return false; 
+      } 
+    
+      findBookByISBN(isbn) {       
+        return this.books.find(book => book.isbn === isbn) || null; 
+      } 
+    
+      listAvailableBooks() {       
+        return this.books.filter(book => !book.isBorrowed); 
+      } 
+  
+      listBorrowedBooks() {       
+        return this.books.filter(book => book.isBorrowed); 
+      } 
+    } 
+    
+    const library = new Library(); 
+    
+    const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565");   
+    const book2 = new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084");   
+    const book3 = new Book("1984", "George Orwell", "9780451524935"); 
+    
+    library.addBook(book1);   
+    library.addBook(book2);   
+    library.addBook(book3); 
+    
+    book1.borrow();   
+    book3.borrow(); 
+    
+    const foundBook = library.findBookByISBN    ("9780061120084");   
+    console.log("Found book:", foundBook); 
+   
+    const availableBooks = library.listAvailableBooks();   
+    console.log("Available books:", availableBooks); 
+   
+    const borrowedBooks = library.listBorrowedBooks();   
+    console.log("Borrowed books:", borrowedBooks); 
+   
+    book1.returnBook(); 
+   
+    const availableBooksAfterReturn = library.listAvailableBooks();   
+    console.log("Available books after return:", availableBooksAfterReturn); 
+
+
+  </script>
+  
+</body>
+</html>
