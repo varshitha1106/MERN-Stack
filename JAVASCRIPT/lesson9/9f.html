@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>9f</title>
+</head>
+<body>
+  <input placeholder="Name" class="name" onKeydown="
+    DisplayName(event);
+  ">
+  <button onclick="
+    SubmitButton();
+  ">Submit</button>
+  <p class="display"></p>
+  <script>
+    function DisplayName(event){
+      if(event.key==='Enter'){
+        SubmitButton();
+
+      }
+    }
+    function SubmitButton(){
+      const inputEle=document.querySelector('.name');
+      document.querySelector('.display').innerHTML=`Your name is: ${inputEle.value}`;
+      }
+    
+  </script>
+  
+</body>
+</html>
