@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>11r.html</title>
+</head>
+<body>
+  <script>
+    function removeEgg(foods){
+      let newarray=[];
+      for(let i=0;i<foods.length;i++){
+        if(foods[i]==='egg'){
+          continue;
+        }
+        else{
+          newarray.push(foods[i]);
+        }
+      }
+      return newarray;
+
+    }
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+    console.log(removeEgg(['egg','apple','egg','ham','eat','grape']));
+  </script>
+  
+</body>
+</html>
