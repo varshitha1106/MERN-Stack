@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-Do-list</title>
+</head>
+<body>
+  <p>Todo List</p>
+  <input placeholder="Todo name" class="js-name">
+  <button onclick="
+    addTodo();
+  ">Add</button>
+<div class="js-todo-list">
+  
+</div>
+  <script>
+    const array=[];     //create array to store
+    displayList();
+
+    function displayList(){
+      let todolisthtml='';
+
+      for (let i=0;i<array.length;i++){
+        const item=array[i];
+        const html=`<p>${item}</p>`;
+        todolisthtml+=html;
+      }
+      console.log(todolisthtml);
+
+      const ans=document.querySelector('.js-todo-list').innerHTML=todolisthtml;
+    }
+
+    function addTodo(){     //when we click add
+      const inputEle=document.querySelector('.js-name');
+      const inputname=inputEle.value; //get text from textbox
+
+      array.push(inputname); //add it to array
+      console.log(array); //display the array in console
+
+      inputEle.value='';
+
+      displayList();
+    }
+
+  </script>
+  
+</body>
+</html>
