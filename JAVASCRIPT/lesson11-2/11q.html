@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>11q.html</title>
+</head>
+<body>
+  <script>
+    
+    function findIndex(array,word){
+      let index=-1;
+      for(let i=0;i<array.length;i++){
+        if(array[i]===word){
+          index=i;
+          break;
+        }
+        else{
+          index=-1;
+        }
+      }
+      return index;
+    }
+    console.log(findIndex(['green','red','blue','red','blue'],'blue'));
+    console.log(findIndex(['green','red','blue','red','blue'],'black'));
+  </script>
+  
+</body>
+</html>
