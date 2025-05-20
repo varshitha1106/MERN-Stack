@@ -4,7 +4,7 @@
   <title>Advanced functions</title>
 </head>
 <body>
-  <script>
+  <script>/*
     function greeting(){
       console.log("Hello");
     }
@@ -40,8 +40,18 @@
     }
     display(function(){
       console.log('hello4');  //callback function
-    });
+    });*/
 
+    setTimeout(function run(){
+      console.log('timeout');
+      console.log('timeout2');//Synchronous code
+    }, 4000);
+                                //Asynchronous code
+    console.log('next line');
+
+    setInterval(function run1(){
+      console.log('interval');
+    }, 4000);
 
 
   </script>
