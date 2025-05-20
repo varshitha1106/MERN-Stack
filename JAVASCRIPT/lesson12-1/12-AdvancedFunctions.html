@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advanced functions</title>
+</head>
+<body>
+  <script>
+    function greeting(){
+      console.log("Hello");
+    }
+    greeting();//calling the function
+
+    //functions are values
+    const function1=function greeting(){
+      console.log('hello1');
+    }
+    function1();
+    console.log(function1);
+    console.log(typeof function1);
+
+    //Anonymous function
+    const function2=function greeting(){
+      console.log('hello2');
+    };
+    function2();
+
+    //in an object
+
+    const obj1={
+      num:2,
+      fun:function(){
+      console.log("Hello3");
+      }
+    };
+    obj1.fun();
+
+    //pass a function into a function
+    function display(param){
+      param();
+    }
+    display(function(){
+      console.log('hello4');  //callback function
+    });
+
+
+
+  </script>
+  
+</body>
+</html>
