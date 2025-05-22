@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>12f</title>
+</head>
+<button class="js-button" onclick="
+  update();
+">Add to cart</button>
+<p class="para"></p>
+<body>
+  <script>
+    let timeoutId;
+    function update(){
+      const display=document.querySelector('.para');
+      display.innerHTML="Added";
+
+      clearTimeout(timeoutId);
+
+      timeoutId=setTimeout(function(){
+        display.innerHTML=' ';
+      },2000);
+    }
+
+  </script>
+  
+</body>
+</html>
