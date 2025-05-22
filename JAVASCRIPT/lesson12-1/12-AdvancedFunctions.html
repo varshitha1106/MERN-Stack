@@ -10,6 +10,9 @@
       20,
       30
     ].forEach(function (value,index){
+      if(value===20){
+        return;
+      }
       console.log(index);
       console.log(value);
     });
