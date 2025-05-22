@@ -10,7 +10,7 @@ displayList();
 function displayList(){
   let todolisthtml='';
 
-  array.forEach(function(item,index){
+  array.forEach((item,index)=>{
     //const item=array[i];
     //const name=item.name;
     const {name}=item;
