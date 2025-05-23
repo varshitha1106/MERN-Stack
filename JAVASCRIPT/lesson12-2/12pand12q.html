@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>12p</title>
+</head>
+<body>
+  <button class="js-but">Start</button>
+  <script>
+    //changed to arrow function and used .addEventListener instead of onclick
+    document.querySelector('.js-but').addEventListener('click',()=>{
+      const button=document.querySelector('.js-but');
+  
+      setTimeout(()=>{
+        button.innerHTML="Finished!";
+        
+      },1000);
+
+    });
+    
+    
+  </script>
+  
+</body>
+</html>
