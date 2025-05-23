@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>12-advancedFunctions</title>
+</head>
+<body>
+
+  <button class="js-button" onclick="
+    ">Click</button>
+  <script>
+
+    const buttonEle=document.querySelector('.js-button');
+
+    const eventListener=()=>{
+      console.log('click');
+    };
+    buttonEle.addEventListener('click',eventListener);
+
+    buttonEle.removeEventListener('click',eventListener);
+
+    buttonEle.addEventListener('click',()=>{
+      console.log('click2');
+
+    });
+
+
+
+    //Arrow functions
+    const arrowfun=()=>{
+      console.log('Arrow functions');
+    }
+    arrowfun();
+
+    const oneLine=()=>2+5;
+    console.log(oneLine);
+
+    [
+      10,
+      20,
+      30
+    ].forEach((value,index)=>{
+      if(value===20){
+        return;
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+    const object2={
+      method:()=>{
+
+      },
+      method() {  //shorthand notation
+ 
+      }
+    };
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
