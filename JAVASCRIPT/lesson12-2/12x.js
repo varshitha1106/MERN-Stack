@@ -154,10 +154,10 @@ function playGame(playerMove){
 }
 function resetScoreelement(){
   score.wins=0;
-    score.losses=0;
-    score.ties=0;
-    localStorage.removeItem('score');
-    updateScoreelement();
+  score.losses=0;
+  score.ties=0;
+  localStorage.removeItem('score');
+  updateScoreelement();
 }
 document.querySelector('.reset-button').addEventListener('click',()=>{
   resetScoreelement();
