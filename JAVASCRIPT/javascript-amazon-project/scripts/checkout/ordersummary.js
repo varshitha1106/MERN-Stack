@@ -106,7 +106,7 @@ export function renderOrderSummary(){
             ${dateString}
           </div>
           <div class="delivery-option-price">
-            ${priceString} - Shipping
+            ${priceString} Shipping
           </div>
         </div>
       </div>
