@@ -8,7 +8,16 @@ export function getProduct(productId){
 
   return matchingProduct;
 }
+class Product{
+  id;
+  image;
+  name;
+  rating;
+  priceCents;
+}
 
+const product1=new Product();
+console.log(product1);
 
 
 
